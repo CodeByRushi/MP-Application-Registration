@@ -34,8 +34,11 @@ public class ARserviceImplementation implements ARservice {
 			entity.setState_name(stateName);
 			CitizenAppsEntity appsEntity = citizenRepo.save(entity);
 			return appsEntity.getApp_id();
+		}else {
+			
+			return 0;
 		}
-		return 0;
+		
 	}
 
 }
